@@ -1,6 +1,6 @@
 
 import { useState, useRef,useEffect } from 'react'
-import './App.css'
+
 
 function App() {
   const [hour, setHour] = useState(0);
@@ -86,7 +86,7 @@ function App() {
       <div className='flex flex-col'>
         <h1 className='text-5xl mb-16 time'>{time}</h1>
         <div className='flex gap-3'>
-        <button className='btn py-2 sm:px-6 px-3 rounded-lg md:rounded-2xl hover:bg-red-700 hover:text-white' onClick={startStopwatch}>Start</button>
+        <button className={`btn py-2 sm:px-6 px-3 rounded-lg md:rounded-2xl ${start ? 'opacity-50 cursor-not-allowed hover:bg-none hover:text-red-600' : ' hover:bg-red-700 hover:text-white'}`} onClick={startStopwatch}>Start</button>
         <button className='btn py-2 sm:px-6 px-3 rounded-lg md:rounded-2xl hover:bg-red-700 hover:text-white' onClick={stopStopwatch}>Stop</button>
         <button className='btn py-2 sm:px-6 px-3 rounded-lg md:rounded-2xl hover:bg-red-700 hover:text-white' onClick={resetStopwatch}>Reset</button>
         <button className='btn py-2 sm:px-6 px-3 rounded-lg md:rounded-2xl hover:bg-red-700 hover:text-white' onClick={lapStopwatch}>Lap</button>
