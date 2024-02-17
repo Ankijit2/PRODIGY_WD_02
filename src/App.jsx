@@ -25,6 +25,7 @@ function App() {
     setMinute(0);
     setSecond(0);
     setTime('00:00:00');
+    setLaps([]);
     setStart(false);
   };
 
@@ -84,11 +85,11 @@ function App() {
       <div className='text-3xl mb-48'>StopWatch</div>
       <div className='flex flex-col'>
         <h1 className='text-5xl mb-16 time'>{time}</h1>
-        <div className='flex'>
-        <button className='btn py-2 px-6 mr-3 rounded-2xl hover:bg-red-700 hover:text-white' onClick={startStopwatch}>Start</button>
-        <button className='btn py-2 px-6 mr-3 rounded-2xl hover:bg-red-700 hover:text-white' onClick={stopStopwatch}>Stop</button>
-        <button className='btn py-2 px-6 mr-3 rounded-2xl hover:bg-red-700 hover:text-white' onClick={resetStopwatch}>Reset</button>
-        <button className='btn py-2 px-6 mr-3 rounded-2xl hover:bg-red-700 hover:text-white' onClick={lapStopwatch}>Lap</button>
+        <div className='flex gap-3'>
+        <button className='btn py-2 sm:px-6 px-3 rounded-lg md:rounded-2xl hover:bg-red-700 hover:text-white' onClick={startStopwatch}>Start</button>
+        <button className='btn py-2 sm:px-6 px-3 rounded-lg md:rounded-2xl hover:bg-red-700 hover:text-white' onClick={stopStopwatch}>Stop</button>
+        <button className='btn py-2 sm:px-6 px-3 rounded-lg md:rounded-2xl hover:bg-red-700 hover:text-white' onClick={resetStopwatch}>Reset</button>
+        <button className='btn py-2 sm:px-6 px-3 rounded-lg md:rounded-2xl hover:bg-red-700 hover:text-white' onClick={lapStopwatch}>Lap</button>
         </div>
 
         <ul className='mt-10 flex flex-col'>
