@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: black;
+  color: red;
+  
+
+}
+
+#root{
+  height: 100vh;
+}
+
+.btn{
+  border: 3px solid red;
+}
+.time{
+  border: 5px solid red;
+  text-align: center;
+  padding: 10px 0;
+box-shadow: rgb(255 0 0 / 36%) 1px 17px 65px 19px, rgb(255 0 0 / 37%) 0px 0px 44px 6px;
+}
+
+.lap{
+  border: 2px solid red;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
