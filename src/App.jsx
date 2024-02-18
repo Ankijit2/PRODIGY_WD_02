@@ -1,5 +1,5 @@
 
-import { useState, useRef,useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 
 function App() {
@@ -68,37 +68,37 @@ function App() {
   }, [hour, minute, second]);
 
 
-  
-
-   
 
 
- 
 
-  
-  
+
+
+
+
+
+
 
 
   return (
     <>
-    <div className='flex flex-col items-center mt-10 m-3 '>
-      <div className='text-3xl mb-48'>StopWatch</div>
-      <div className='flex flex-col'>
-        <h1 className='text-5xl mb-16 time'>{time}</h1>
-        <div className='flex gap-3'>
-        <button className={`btn py-2 sm:px-6 px-3 rounded-lg md:rounded-2xl ${start ? 'opacity-50 cursor-not-allowed hover:bg-none hover:text-red-600' : ' hover:bg-red-700 hover:text-white'}`} onClick={startStopwatch}>Start</button>
-        <button className='btn py-2 sm:px-6 px-3 rounded-lg md:rounded-2xl hover:bg-red-700 hover:text-white' onClick={stopStopwatch}>Stop</button>
-        <button className='btn py-2 sm:px-6 px-3 rounded-lg md:rounded-2xl hover:bg-red-700 hover:text-white' onClick={resetStopwatch}>Reset</button>
-        <button className='btn py-2 sm:px-6 px-3 rounded-lg md:rounded-2xl hover:bg-red-700 hover:text-white' onClick={lapStopwatch}>Lap</button>
-        </div>
+      <div className='flex flex-col items-center mt-10 m-3 '>
+        <div className='text-3xl mb-48'>StopWatch</div>
+        <div className='flex flex-col'>
+          <h1 className='text-5xl mb-16 time'>{time}</h1>
+          <div className='flex gap-3'>
+            <button className={`btn py-2 sm:px-6 px-3 rounded-lg md:rounded-2xl ${start ? 'opacity-50 cursor-not-allowed hover:bg-none hover:text-red-600' : ' hover:bg-red-700 hover:text-white'}`} onClick={startStopwatch}>Start</button>
+            <button className={`btn py-2 sm:px-6 px-3 rounded-lg md:rounded-2xl ${!start ? 'opacity-50 cursor-not-allowed hover:bg-none hover:text-red-600' : ' hover:bg-red-700 hover:text-white'}`} onClick={stopStopwatch}>Stop</button>
+            <button className='btn py-2 sm:px-6 px-3 rounded-lg md:rounded-2xl hover:bg-red-700 hover:text-white' onClick={resetStopwatch}>Reset</button>
+            <button className='btn py-2 sm:px-6 px-3 rounded-lg md:rounded-2xl hover:bg-red-700 hover:text-white' onClick={lapStopwatch}>Lap</button>
+          </div>
 
-        <ul className='mt-10 flex flex-col'>
-          <div className='text-2xl'>Recorded laps</div>
-          {laps.map((lap, index) => (
-            <li key={index} className='text-xl my-1 lap'>{lap}</li>
-          ))}
-        </ul>
-      </div>
+          <ul className='mt-10 flex flex-col'>
+            <div className='text-2xl'>Recorded laps</div>
+            {laps.map((lap, index) => (
+              <li key={index} className='text-xl my-1 lap'>{lap}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   )
